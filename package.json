@@ -1,0 +1,34 @@
+{
+  "name": "medication-reminder",
+  "version": "1.0.0",
+  "description": "Voice-driven medication reminder system using Twilio, TTS, and STT",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@deepgram/sdk": "^2.4.0",
+    "axios": "^1.8.4",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.13.0",
+    "twilio": "^4.23.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^6.3.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": []
+}
