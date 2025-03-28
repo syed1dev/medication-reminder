@@ -14,7 +14,7 @@ const logger = require('../utils/logger');
 const { AppError, ErrorTypes } = require('../middleware/errorHandler');
 
 // Define standard messages
-const MEDICATION_REMINDER_MESSAGE = "Hello, this is a reminder from your healthcare provider to confirm your medications for the day. Please confirm if you have taken your medications today.";
+const MEDICATION_REMINDER_MESSAGE = "Hello, this is a reminder from your healthcare provider to confirm your medications for the day. Please confirm if you have taken your Aspirin, Cardivol, and Metformin today.";
 const VOICEMAIL_MESSAGE = "We called to check on your medication but couldn't reach you. Please call us back or take your medications if you haven't done so.";
 const POSITIVE_RESPONSE_MESSAGE = "Thank you for confirming you've taken your medications. Have a nice day.";
 const NEGATIVE_RESPONSE_MESSAGE = "Thank you for letting us know. Please take your medications as prescribed. Your health provider will be notified about this. Have a nice day.";
@@ -230,7 +230,7 @@ exports.handleGather = async (req, res) => {
     // Check if the response indicates medication was taken
     const positiveKeywords = ['yes', 'yeah', 'yep', 'yup', 'taken', 'did', 'have', 'already', 'completed'];
     const negativeKeywords = ['no', 'not', 'haven\'t', 'didn\'t', 'don\'t', 'forgot', 'later', 'missed'];
-    const medicationKeywords = ['medication', 'medicine', 'pill', 'drug', 'tablet'];
+    const medicationKeywords = ['medication', 'medicine', 'pill', 'drug', 'tablet', 'aspirin', 'cardivol', 'metformin'];
     
     const responseLower = patientResponse.toLowerCase();
     
